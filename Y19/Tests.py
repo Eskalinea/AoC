@@ -1,13 +1,54 @@
 from Y19 import *
+__author__ = "Faremir"
+__copyright__ = "GNU3"
+__credits__ = "Eskalinea"
+
+__license__ = "GNU"
+__version__  = "1.0.1"
+__email__ = "jirka.f.blahut@gmail.com"
+
+"""
+# GUIDE:
+
+Zkratky:
+CTRL + 1 (ta vedle esc) mám nastavené jako line comment
+CTRL + 2 jako block comment
+F11 mám run (F5 zůstává), F12 je reformat code
+
+Funkcionalita:
+1) funkce/classy pro danný den si vždy nadefinuj v daném souboru. Každý den má dvě části. Je lepší dané fce oddělit.
+      Zpracování výsledků můžeš zavolat i tady pokud se ti to bude zdát logické (třeba že by fce neměla vracet výpočet neco*100 :D)
+2) volání probíhá dle názvů v __init__.py př:
+      D01.<jmeno_fce> nebo D<cislo_dne>.<jmeno_objektu>  ==>  D01.hello()
+3) na stránce advent of code např. "https://adventofcode.com/2019/day/1/input" si lze stáhnout input k danému zadání
+      vždy to rozparsuj a nevkládej to jako string. :D normálně with open(file, "r") as input_f: a pak třeba input_f.readlines()
+      když budeš dané zadání stahovat ulož ho do složky Programming/Python/AoC/Y19/Assignments pod daný den. Např 01.txt
+           - když potom spustíš main tak se ti automaticky přiloží k dané funkci. stačí ho vždy poslat jen dovntiř tu v testingu
+4) vždy vracej výsledky jako part_one, part_two: Když potom spustíš fci main tak se ti výsledky ukážou zarovnané v té tabulce co jsem ti posílal
+5) pokud nevis co delas tak nemen zadnou fci pod day_24 (ale to se u tohohle rychle naučíš. :D)
 
 
+Example:
+    func:
+            def day_01(file = ""):
+                part_one = D01.hello()
+                return part_one, part_two
+                return part_one, part_two
+      
+    Output:
+      
+        ║════════ Advent of Code ════════║
+        ║ Use default filesystem [y/n]?  ╠═ y -- uživatelskej input. Kdybys chtěla můžu ho později smazat !!!!
+        ╠═════════════ 2019 ═════════════║
+        ║ • Day: 01                      ║
+        ║  	◦ Part one: hello world      ║
+        ║  	◦ Part two: None             ║
+"""
 def day_01(file = ""):
     """
-    Test: Day 2
+    Test: Day 1
     """
-    part_one = D01.get_fuel_requirment(file)
-
-    part_two = D01.get_fuel_req_recursive(file)
+    part_one, part_two = None, None
     return part_one, part_two
 
 
@@ -15,10 +56,8 @@ def day_02(file = ""):
     """
     Test: Day 2
     """
-    intcode = D02.Computer(file)
-    part_one = intcode.get_restored_noun()
-    noun, verb = intcode.get_noun_verb_by_opt(19690720)
-    return part_one, 100 * noun + verb
+    part_one, part_two = None, None
+    return part_one, part_two
 
 
 def day_03(file = ""):
